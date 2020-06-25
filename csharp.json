@@ -1,0 +1,32 @@
+{
+  "IAction Result": {
+    "prefix": "iact",
+    "body": [
+      "public IActionResult $1($2)",
+      "{",
+      "    return View();",
+      "}"
+    ],
+    "description": "IAction Result"
+  },
+  "Stored Prod": {
+    "prefix": "stpr",
+    "body": [
+      "using(SqlConnection conn = new SqlConnection(base.Connection.ConnectionString))",
+      "{",
+      "    conn.Open();",
+      "    SqlCommand cmd = new SqlCommand(\"spAccountPrepaidValueTransfer\", conn);",
+      "",
+      "    cmd.CommandType = CommandType.StoredProcedure;",
+      "    cmd.Parameters.Add(new SqlParameter(\"@Id\", SqlDbType.BigInt)).Direction = ParameterDirection.Output;",
+      "    cmd.Parameters.Add(new SqlParameter(\"@Msg\", SqlDbType.NVarChar, -1));",
+      "    cmd.Parameters[\"@Msg\"].Direction = ParameterDirection.Output;",
+      "    cmd.ExecuteScalar();",
+      "",
+      "    DatabaseMessage = cmd.Parameters[\"@Msg\"].SqlValue.ToString();",
+      "    Int32 Id = int.Parse(cmd.Parameters[\"@Id\"].SqlValue.ToString());",
+      "}"
+    ],
+    "description": "Stored Prod"
+  }
+}

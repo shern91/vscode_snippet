@@ -1,0 +1,37 @@
+{
+  "Console Log": {
+    "prefix": "cl",
+    "body": "console.log($1);",
+    "description": "Console Log"
+  },
+  "CDN Axios" : {
+    "prefix": "axios",
+    "body": "<script src='https://unpkg.com/axios/dist/axios.min.js'></script>",
+    "description": "Import Axios by CDN"
+  },
+  "CDN Jquery" : {
+    "prefix": "jquery",
+    "body": "<script src='https://code.jquery.com/jquery-3.4.1.js'></script>",
+    "description": "Import Jquery by CDN"
+  },
+  "CDN Bootstrap JS" : {
+    "prefix": "bootstrapJS",
+    "body": "<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>",
+    "description": "Import Bootstrap JS by CDN"
+  },
+  "CDN Bootstrap CSS" : {
+    "prefix": "bootstrapCSS",
+    "body": "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>",
+    "description": "Import Bootstrap CSS by CDN"
+  },
+  "CDN VueJs Development" : {
+    "prefix": "VueJSDev",
+    "body": "<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>",
+    "description": "Import VueJs by CDN for development"
+  },
+  "CDN VueJs Production" : {
+    "prefix": "VueJSProd",
+    "body": "<script src='https://cdn.jsdelivr.net/npm/vue'></script>",
+    "description": "Import VueJs by CDN for production"
+  }
+}
